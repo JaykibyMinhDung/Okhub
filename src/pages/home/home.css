@@ -1,0 +1,10 @@
+@font-face {
+    font-family: signCountry;
+    src: url('../../public/font/tomatoes/Tomatoes400.ttf');
+}
+
+#test {
+    font-family: signCountry;
+    font-size: 350%;
+    color: #FFD772;
+}

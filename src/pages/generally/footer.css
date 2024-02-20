@@ -1,0 +1,7 @@
+.footer_horizontal {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    object-fit: contain;
+    height: 450px;
+}
