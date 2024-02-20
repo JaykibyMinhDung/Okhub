@@ -1,6 +1,84 @@
-.navbar_horizontal {
+h1 {
+    font-weight: 1000;
+    font-size: 200%
+}
+
+h2 {
+    font-weight: 800
+}
+
+h3 {
+    font-weight: 600
+}
+
+h4 {
+    font-weight: 400
+}
+
+h5,
+h6 {
+    font-weight: 200
+}
+
+a {
+    font-weight: 800;
+    font-size: smaller;
+    color: black;
+    text-decoration: none;
+}
+
+select {
+    outline: none;
+}
+
+.active_herder {
+    display: flex;
+    align-items: center;
+}
+
+.active_herder::before {
+    content: '.';
+    font-size: 200%;
+    position: absolute;
+    bottom: 70%;
+    width: 100%;
+    height: 2px;
+    /* Độ dài của đường chấm (điều chỉnh theo ý muốn) */
+    opacity: 0%;
+    /* Màu của đường chấm khi bình thường */
+    transition: padding-bottom padding-bottom opacity 0.5s ease-in;
+    /* scale */
+}
+
+/* animation */
+
+.active_herder select:hover,
+a:hover {
+    cursor: pointer;
+    color: #B34B1E;
+    padding-bottom: 1rem;
+}
+
+.active_herder:hover::before {
+    opacity: 100%;
+    color: #B34B1E;
+    padding-left: 1rem;
+}
+
+#nature_headtitle {
+    font-size: 550%;
+    letter-spacing: 0.2em;
+    font-family: signCountry;
+    text-align: right;
     color: white;
+}
+
+.navbar_horizontal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     object-fit: contain;
     height: 650px;
     margin-bottom: 20px;
+    color: white;
 }
