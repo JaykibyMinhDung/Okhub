@@ -22,10 +22,10 @@ const Footer = () => {
         backgroundPosition: "center center",
       }}
     >
-      <div style={{ width: "30%" }}>
+      <div className="md:w-[30%] w-[100%] mobile__logo-footer">
         <img width={"50%"} src={logo} alt="" />
       </div>
-      <div className="w-[70%] flex justify-evenly gap-16">
+      <div className="w-[70%] flex md:justify-evenly items-center md:flex-nowrap flex-wrap gap-16 mobile__footer">
         <div>
           <h3 className="font-bold" >CONTACT US</h3>
           <div className="p-2 flex items-center gap-2 text-[#727272] ">

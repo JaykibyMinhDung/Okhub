@@ -1,10 +1,36 @@
 .footer_horizontal {
     display: flex;
     /* justify-content: space-between; */
-    flex-wrap: wrap;
-    position: relative;
-    bottom: 0%;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* position: relative;
+    bottom: 0%; */
     color: black;
-    object-fit: contain;
-    height: 450px;
+    height: 550px;
+}
+
+@media (max-width: 480px) {
+    .footer_horizontal {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /* position: absolute; */
+        height: 180vh;
+    }
+
+    .mobile__footer {
+        position: absolute;
+        top: 79%;
+    }
+
+    .mobile__logo-footer {
+        position: absolute;
+        top: 74.5%;
+        left: 15%;
+    }
+
+    .mobile__footer h3 {
+        text-align: center;
+    }
+
 }

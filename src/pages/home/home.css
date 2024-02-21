@@ -10,7 +10,7 @@
     color: #FFD772;
 }
 
-button:hover {
+.hoverButton button:hover {
     background-color: #B34B1E;
     color: white;
 }
@@ -19,4 +19,40 @@ button:hover {
     position: absolute;
     top: 0%;
     z-index: 10;
+}
+
+@media (max-width: 480px) {
+    .mobile_album {
+        display: none;
+    }
+
+    .mobile_mainImage {
+        display: none;
+    }
+
+    .mobile__mapVietNam {
+        display: none;
+    }
+
+    #text_VietNam {
+        font-family: signCountry;
+        font-size: 250%;
+        margin: 2rem;
+        color: white;
+        z-index: 100;
+    }
+
+    .mobile__includesMain {
+        display: none;
+    }
+}
+
+@media (min-width: 720px) {
+    .mobile__mapVietNam--active {
+        display: none;
+    }
+
+    .mobile_mainImage--active {
+        display: none;
+    }
 }

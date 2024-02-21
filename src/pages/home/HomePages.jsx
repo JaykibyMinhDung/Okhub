@@ -12,67 +12,66 @@ import teamWork from "../../public/images/teamwork.png";
 import Video from "../../public/video/HÀ GIANG NHỮNG CUNG ĐƯỜNG TRONG MÂY - 4K FLYCAM Video-(1080p).mp4";
 
 import Button from "../../components/Button";
-import CustomTabPanel from "../../components/Tab"
+import CustomTabPanel from "../../components/Tab";
 import "./home.css";
 import Tour from "../../components/Tour";
+import SlideShow from "../../components/SlideShow";
 
 const HomePages = () => {
+  const test = [discover, teamWork, ""];
   const data = [
-    {id: 0, nameTabs: "Tourleader", component: <Tour images={[
-      discover,
-      teamWork,
-      "" ,
-    ]} />},
-    {id: 1, nameTabs: "Speacialist", component: "test"},
-    {id: 2, nameTabs: "Localhost", component: "test"},
-    {id: 3, nameTabs: "Riderteam", component: "test"}
-  ]
+    { id: 0, nameTabs: "Tourleader", component: <Tour images={test} /> },
+    { id: 1, nameTabs: "Speacialist", component: <SlideShow /> },
+    { id: 2, nameTabs: "Localhost", component: <SlideShow /> },
+    { id: 3, nameTabs: "Riderteam", component: "test" },
+  ];
   return (
     <main className="relative">
       <div>
         <div className="relative h-[55rem]">
-          <div className="text-center text-orange-okhub">
-            <h3 className="text-[100%]">WELCOME TO</h3>
-            <h1 className="text-[300%]">HA GIANG LOOP</h1>
+          <div className="text-center text-orange-okhub md:z-0">
+            <h3 className="md:text-[100%] text-[50%]">WELCOME TO</h3>
+            <h1 className="md:text-[300%] text-[200%]">HA GIANG LOOP</h1>
             <h1 id="text_VietNam">Viet Nam</h1>
           </div>
           <div>
-            <div className="absolute left-[-5%] top-[0%]">
-              <img
-                width={"60%"}
-                className="opacity-60 brightness-100 rounded-xl"
-                src={imageFour}
-                alt="Anh lỗi"
-              />
+            <div className="mobile_album">
+              <div className="absolute left-[-5%] top-[0%]">
+                <img
+                  width={"60%"}
+                  className="opacity-60 brightness-100 rounded-xl"
+                  src={imageFour}
+                  alt="Anh lỗi"
+                />
+              </div>
+              <div className="absolute left-[-15%] top-[30%]">
+                <img
+                  width={"70%"}
+                  className="opacity-60 brightness-100 rounded-xl"
+                  src={imageThird}
+                  alt="Anh lỗi"
+                />
+              </div>
+              <div className="absolute right-[-30%] top-[0%]">
+                <img
+                  width={"60%"}
+                  className="opacity-60 brightness-100 rounded-xl"
+                  src={imageIntro}
+                  alt="Anh lỗi"
+                />
+              </div>
+              <div className="absolute right-[-20%] top-[38%]">
+                <img
+                  width={"60%"}
+                  className="opacity-60 brightness-100 rounded-xl"
+                  src={imageMoutain}
+                  alt="Anh lỗi"
+                />
+              </div>
             </div>
-            <div className="absolute left-[-15%] top-[30%]">
-              <img
-                width={"70%"}
-                className="opacity-60 brightness-100 rounded-xl"
-                src={imageThird}
-                alt="Anh lỗi"
-              />
-            </div>
-            <div className="absolute right-[-30%] top-[0%]">
-              <img
-                width={"60%"}
-                className="opacity-60 brightness-100 rounded-xl"
-                src={imageIntro}
-                alt="Anh lỗi"
-              />
-            </div>
-            <div className="absolute right-[-20%] top-[38%]">
-              <img
-                width={"60%"}
-                className="opacity-60 brightness-100 rounded-xl"
-                src={imageMoutain}
-                alt="Anh lỗi"
-              />
-            </div>
-            <div className="absolute left-[25%] top-[35%]">
+            <div className="absolute md:left-[25%] md:top-[35%] left-[0%] top-[20%]">
               <video
-                className=" rounded-xl"
-                width={"65%"}
+                className="md:w-[65%] w-[100%] rounded-xl"
                 // controls
                 autostart={true}
                 autoPlay={true}
@@ -84,13 +83,18 @@ const HomePages = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-20 ml-10">
+        <div className="flex gap-20 md:flex-nowrap flex-wrap md:ml-10 ml-4">
           <div className="w-[50%]">
-            <div className="text-orange-okhub w-[50%]">
+            <div className="text-orange-okhub md:w-[50%] w-[100%]">
               <h3>START WITH</h3>
-              <h1 className="text-[300%]">HA GIANG CHEERS TOUR</h1>
+              <h1 className="md:text-[300%] text-[200%]">
+                HA GIANG CHEERS TOUR
+              </h1>
             </div>
-            <div className="w-[100%] grid grid-cols-2 gap-4 place-content-center text-white">
+            <div className="w-[100%] mobile__mapVietNam--active">
+              <img width={"100%"} src={mapVietNam} alt="" />
+            </div>
+            <div className="w-[100%] grid grid-rows-1 md:grid-cols-2 gap-4 md:place-content-center text-white">
               <button
                 className="hover:bg-transparent"
                 style={{
@@ -100,7 +104,7 @@ const HomePages = () => {
       )`,
                   backgroundPosition: "center center",
                   height: "70px",
-                  margin: '10px'
+                  margin: "10px",
                 }}
                 type="button"
               >
@@ -115,7 +119,7 @@ const HomePages = () => {
       )`,
                   backgroundPosition: "center center",
                   height: "70px",
-                  margin: '10px'
+                  margin: "10px",
                 }}
                 type="button"
               >
@@ -130,7 +134,7 @@ const HomePages = () => {
       )`,
                   backgroundPosition: "center center",
                   height: "70px",
-                  margin: '10px'
+                  margin: "10px",
                 }}
                 type="button"
               >
@@ -145,7 +149,7 @@ const HomePages = () => {
       )`,
                   backgroundPosition: "center center",
                   height: "70px",
-                  margin: '10px'
+                  margin: "10px",
                 }}
                 type="button"
               >
@@ -166,72 +170,27 @@ const HomePages = () => {
                 to offer in a safe environment with our experienced easy riders.
               </p>
             </div>
-            <div className="flex gap-2 mt-4">
+            <div className="flex gap-2 mt-4 hoverButton">
               <Button name={"BOOK NOW"} cancelButton={false} />
               <Button name={"READ MORE"} cancelButton={true} />
             </div>
           </div>
-          <div className="w-[40%]">
+          <div className="w-[40%] mobile__mapVietNam">
             <img width={"80%"} src={mapVietNam} alt="" />
           </div>
         </div>
-        <div className="flex gap-5 ml-10 my-20 bg-white z-10">
+        <div className="flex gap-5 md:flex-nowrap flex-wrap md:ml-10 ml-4 my-20 bg-white z-10">
           <div className="w-[60%]">
             <div className="text-orange-okhub w-[30%]">
               <h3>CHEERS</h3>
               <h1 className="text-[300%]">FAMILY</h1>
             </div>
-            {/* <div>
-              <h3>H'MONG TEAM</h3>
-              <p>
-                Blown away by our Tanzania safari, I never expected it to be
-                that good — it totally exceeded my expectations and was all
-                hassle free. Our guide was absolutely amazing too. Have
-                re-booked and cannot wait for next year! Blown away by our
-                Tanzania safari, I never expected it to be that good — it
-                totally exceeded my expectations and was all hassle free. Our
-                guide was absolutely amazing too. Have re-booked and cannot wait
-                for .Our guide was absolutely amazing too.
-              </p>
-            </div>
-            <div>
-              <p>
-                <img src="" alt="" />
-                <b>group size: </b>
-                <span>15 members</span>
-              </p>
-              <p>
-                <img src="" alt="" />
-                <b>transport: </b>
-                <span>Motorbike</span>
-              </p>
-              <p>
-                <img src="" alt="" />
-                <b>Trip completed: </b>
-                <span>154 trips</span>
-              </p>
-            </div>
-            <div className="flex gap-2">
-              <Button name="JOIN WITH US" cancelButton={false} />
-              <Button name="CALL US" cancelButton={true} />
-            </div> */}
           </div>
           <div>
             <CustomTabPanel data={data} />
-            {/* <ul>
-              <li>TOUR LEADER</li>
-              <li>SPECIALLIST</li>
-              <li>LOCAL HOST</li>
-              <li>RIDER TEAM</li>
-            </ul>
-            <div>
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
-            </div> */}
           </div>
         </div>
-        <div className="h-[37rem] ml-10 flex gap-4 sm:flex-nowrap flex-wrap">
+        <div className="h-[37rem] ml-10 flex gap-4 sm:flex-nowrap md:flex-nowrap flex-wrap">
           <div className="text-orange-okhub w-[80%]">
             <h3>FAQ ABOUT</h3>
             <h1 className="text-[300%]">THE TRIPS</h1>
@@ -247,7 +206,9 @@ const HomePages = () => {
                 </p>
               </div>
               <div>
-                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What is included or excluded?</p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                  What is included or excluded?
+                </p>
                 <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
@@ -255,7 +216,9 @@ const HomePages = () => {
                 </p>
               </div>
               <div>
-                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">How do I book and corfirm my trip?</p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                  How do I book and corfirm my trip?
+                </p>
                 <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
@@ -264,14 +227,18 @@ const HomePages = () => {
               </div>
               <div>
                 <div>
-                  <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What should I bring??</p>
+                  <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                    What should I bring??
+                  </p>
                   <p className="text-[#727272]">
                     Blown away by our Tanzania safari, I never expected it to be
                     that good — it totally exceeded mytations and was all hassle
                     free. Our guide was absolutely amazing too. Have re-booked.
                   </p>
                 </div>
-                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">Travel insurance?</p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                  Travel insurance?
+                </p>
                 <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
@@ -280,47 +247,53 @@ const HomePages = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="mobile__includesMain">
+            <div>
+              <h2 className="text-black text-3xl">JOURNEY</h2>
+              <p className="text-[#727272]">
+                Browse our full service agency services and prices or contact us
+                for custom quotes.
+              </p>
+            </div>
+            <div>
+              <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                What is included or excluded?
+              </p>
+              <p className="text-[#727272]">
+                Blown away by our Tanzania safari, I never expected it to be
+                that good — it totally exceeded mytations and was all hassle
+                free. Our guide was absolutely amazing too. Have re-booked.
+              </p>
+            </div>
+            <div>
+              <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                How do I book and corfirm my trip?
+              </p>
+              <p className="text-[#727272]">
+                Blown away by our Tanzania safari, I never expected it to be
+                that good — it totally exceeded mytations and was all hassle
+                free. Our guide was absolutely amazing too. Have re-booked.
+              </p>
+            </div>
             <div>
               <div>
-                <h2 className="text-black text-3xl">JOURNEY</h2>
-                <p className="text-[#727272]">
-                  Browse our full service agency services and prices or contact
-                  us for custom quotes.
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                  What should I bring??
                 </p>
-              </div>
-              <div>
-                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What is included or excluded?</p>
                 <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
                 </p>
               </div>
-              <div>
-                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">How do I book and corfirm my trip?</p>
-                <p className="text-[#727272]">
-                  Blown away by our Tanzania safari, I never expected it to be
-                  that good — it totally exceeded mytations and was all hassle
-                  free. Our guide was absolutely amazing too. Have re-booked.
-                </p>
-              </div>
-              <div>
-                <div>
-                  <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What should I bring??</p>
-                  <p className="text-[#727272]">
-                    Blown away by our Tanzania safari, I never expected it to be
-                    that good — it totally exceeded mytations and was all hassle
-                    free. Our guide was absolutely amazing too. Have re-booked.
-                  </p>
-                </div>
-                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">Travel insurance?</p>
-                <p className="text-[#727272]">
-                  Blown away by our Tanzania safari, I never expected it to be
-                  that good — it totally exceeded mytations and was all hassle
-                  free. Our guide was absolutely amazing too. Have re-booked.
-                </p>
-              </div>
+              <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">
+                Travel insurance?
+              </p>
+              <p className="text-[#727272]">
+                Blown away by our Tanzania safari, I never expected it to be
+                that good — it totally exceeded mytations and was all hassle
+                free. Our guide was absolutely amazing too. Have re-booked.
+              </p>
             </div>
           </div>
         </div>

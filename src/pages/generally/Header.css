@@ -29,6 +29,7 @@ a {
 
 select {
     outline: none;
+    background-color: transparent;
 }
 
 .active_herder {
@@ -36,23 +37,21 @@ select {
     align-items: center;
 }
 
-.active_herder::before {
+/* .active_herder::before {
     content: '.';
     font-size: 200%;
     position: absolute;
     bottom: 70%;
     width: 100%;
     height: 2px;
-    /* Độ dài của đường chấm (điều chỉnh theo ý muốn) */
     opacity: 0%;
-    /* Màu của đường chấm khi bình thường */
     transition: padding-bottom padding-bottom opacity 0.5s ease-in;
-    /* scale */
-}
+} */
 
 /* animation */
 
-.active_herder select:hover,
+
+select:hover,
 a:hover {
     cursor: pointer;
     color: #B34B1E;
@@ -81,4 +80,43 @@ a:hover {
     height: 650px;
     margin-bottom: 20px;
     color: white;
+}
+
+@media (max-width: 480px) {
+    .disabled_responsive {
+        display: none;
+    }
+
+    .logo_responsive {
+        position: absolute;
+        top: 0;
+        left: 1%;
+    }
+
+    .mobile_navbar {}
+
+    #nature_headtitle {
+        font-size: 350%;
+        letter-spacing: 0.2em;
+        font-family: signCountry;
+        text-align: right;
+        color: white;
+    }
+
+    .disabled_responsive--active {
+        position: absolute;
+        top: 15%;
+        left: 3%;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 720px) {
+    .logo_responsive {
+        display: none;
+    }
+
+    .disabled_responsive--active {
+        display: none;
+    }
 }
