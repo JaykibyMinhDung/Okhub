@@ -5,7 +5,13 @@
 
 #text_VietNam {
     font-family: signCountry;
-    font-size: 550%;
+    font-size: 650%;
     margin: 2rem;
     color: #FFD772;
+}
+
+.container-background {
+    position: absolute;
+    top: 0%;
+    z-index: 10;
 }

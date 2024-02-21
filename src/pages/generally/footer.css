@@ -1,6 +1,9 @@
 .footer_horizontal {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 0%;
     color: black;
     object-fit: contain;
     height: 450px;

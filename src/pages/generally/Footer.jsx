@@ -18,10 +18,17 @@ const Footer = () => {
       <div style={{ width: "30%" }}>
         <img width={"50%"} src={logo} alt="" />
       </div>
-      <div style={{ width: "70%", display: 'flex', justifyContent: 'center', gap: '70px' }}>
+      <div
+        style={{
+          width: "70%",
+          display: "flex",
+          justifyContent: "center",
+          gap: "70px",
+        }}
+      >
         <div>
           <div>
-          <h3>CONTACT US</h3>
+            <h3>CONTACT US</h3>
             <p>84 98 3333 986 (Miss. Linette)</p>
             <p>84 989 655 995 (Mr. Chinh)</p>
           </div>

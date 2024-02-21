@@ -60,12 +60,12 @@ const Header = () => {
           <img width={"70%"} src={youtubeSubcrise} alt="youtube" />
         </div>
       </nav>
-      <div className="w-[75%] flex flex-col items-center gap-8 absolute bottom-10 rounded-xl">
+      <div className="w-[75%] flex flex-col items-center gap-8 absolute bottom-10">
         <div className="w-[50%] text-[#FFFFFF]">
           <h1 className="leading-[1rem] text-[300%] ">BACK TO</h1>{" "}
           <h1 id="nature_headtitle">nature</h1>
         </div>
-        <div className="w-90% p-3 flex justify-between text-black bg-white">
+        <div className="w-90% p-3 flex justify-between text-black bg-white rounded-xl">
           <div>
             <p className="text-[70%] text-[#727272] mb-2">TOUR</p>
             <div className="flex gap-3 font-bold">
