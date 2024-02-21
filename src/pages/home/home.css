@@ -10,6 +10,11 @@
     color: #FFD772;
 }
 
+button:hover {
+    background-color: #B34B1E;
+    color: white;
+}
+
 .container-background {
     position: absolute;
     top: 0%;

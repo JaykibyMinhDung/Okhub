@@ -1,6 +1,13 @@
 import React from "react";
 import footerImg from "../../public/images/footer.png";
 import logo from "../../public/svg/logo.svg";
+import location from "../../public/svg/location.svg";
+import home from "../../public/svg/home.svg";
+import motorbike from "../../public/svg/motorbike.svg";
+import contact from "../../public/svg/contact.svg";
+import email from "../../public/svg/email.svg";
+import hotel from "../../public/svg/hotel.svg";
+
 import "./footer.css";
 
 const Footer = () => {
@@ -18,35 +25,54 @@ const Footer = () => {
       <div style={{ width: "30%" }}>
         <img width={"50%"} src={logo} alt="" />
       </div>
-      <div
-        style={{
-          width: "70%",
-          display: "flex",
-          justifyContent: "center",
-          gap: "70px",
-        }}
-      >
+      <div className="w-[70%] flex justify-evenly gap-16">
         <div>
-          <div>
-            <h3>CONTACT US</h3>
-            <p>84 98 3333 986 (Miss. Linette)</p>
-            <p>84 989 655 995 (Mr. Chinh)</p>
+          <h3 className="font-bold" >CONTACT US</h3>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img src={contact} alt="" />
+            <div>
+              <p>+ 84 98 3333 986 (Miss. Linette)</p>
+              <p>+ 84 989 655 995 (Mr. Chinh)</p>
+            </div>
           </div>
-          <p>@cheershoster1@gmail.com</p>
-          <p>5 Au Trieu, Hoan Kien, Ha Noi</p>
-          <p>Vietnam Cheers Hostel Official Site</p>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img src={email} alt="" />
+            <p>@cheershoster1@gmail.com</p>
+          </div>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img src={home} alt="" />
+            <p>5 Au Trieu, Hoan Kien, Ha Noi</p>
+          </div>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img src={hotel} alt="" />
+            <p>Vietnam Cheers Hostel Official Site</p>
+          </div>
         </div>
         <div>
-          <h3>ALL TOUR</h3>
-          <p>Ha Giang Tour (3D3N)</p>
-          <p>Ha Giang Tour (4D4N)</p>
-          <p></p>
+          <h3 className="font-bold" >ALL TOUR</h3>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img src={motorbike} alt="" />
+            <p>Ha Giang Tour (3D3N)</p>
+          </div>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img src={motorbike} alt="" />
+            <p>Ha Giang Tour (4D4N)</p>
+          </div>
         </div>
         <div>
-          <h3>CHEERS TOURS</h3>
-          <p>Ha Long Bay</p>
-          <p>Sapa Trekking Tour</p>
-          <p>Pu Luong Cheers Tour</p>
+          <h3 className="font-bold" >CHEERS TOURS</h3>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img width={'10%'} src={location} alt="" />
+            <p>Ha Long Bay</p>
+          </div>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img width={'10%'} src={location} alt="" />
+            <p>Sapa Trekking Tour</p>
+          </div>
+          <div className="p-2 flex items-center gap-2 text-[#727272] ">
+            <img width={'10%'} src={location} alt="" />
+            <p>Pu Luong Cheers Tour</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,12 +7,26 @@ import imageMoutain from "../../public/images/d82790382e4739aa6ec45fc8962eeac4.j
 import imageIntro from "../../public/images/694ed1f9b66390adfcad8aaea00ff891.jpg";
 import imageThird from "../../public/images/d59d1776936b14c732607a7db21070e9.jpg";
 import imageFour from "../../public/images/d6fe19708db70d2cfa7f63b53376f1eb.jpg";
+import discover from "../../public/images/discoverHaGiang.png";
+import teamWork from "../../public/images/teamwork.png";
 import Video from "../../public/video/HÀ GIANG NHỮNG CUNG ĐƯỜNG TRONG MÂY - 4K FLYCAM Video-(1080p).mp4";
-import Button from "../../components/Button";
 
+import Button from "../../components/Button";
+import CustomTabPanel from "../../components/Tab"
 import "./home.css";
+import Tour from "../../components/Tour";
 
 const HomePages = () => {
+  const data = [
+    {id: 0, nameTabs: "Tourleader", component: <Tour images={[
+      discover,
+      teamWork,
+      "" ,
+    ]} />},
+    {id: 1, nameTabs: "Speacialist", component: "test"},
+    {id: 2, nameTabs: "Localhost", component: "test"},
+    {id: 3, nameTabs: "Riderteam", component: "test"}
+  ]
   return (
     <main className="relative">
       <div>
@@ -78,7 +92,7 @@ const HomePages = () => {
             </div>
             <div className="w-[100%] grid grid-cols-2 gap-4 place-content-center text-white">
               <button
-                className=""
+                className="hover:bg-transparent"
                 style={{
                   backgroundSize: "cover",
                   backgroundImage: `url(
@@ -93,7 +107,7 @@ const HomePages = () => {
                 SUPPORT LOCAL - SUSTAINABLE TRAVEL
               </button>
               <button
-                className=""
+                className="hover:bg-transparent"
                 style={{
                   backgroundSize: "cover",
                   backgroundImage: `url(
@@ -108,7 +122,7 @@ const HomePages = () => {
                 FREE 100% CANCELLATION
               </button>
               <button
-                className=""
+                className="hover:bg-transparent"
                 style={{
                   backgroundSize: "cover",
                   backgroundImage: `url(
@@ -123,7 +137,7 @@ const HomePages = () => {
                 DAILY DEPARTURES
               </button>
               <button
-                className=""
+                className="hover:bg-transparent"
                 style={{
                   backgroundSize: "cover",
                   backgroundImage: `url(
@@ -161,13 +175,13 @@ const HomePages = () => {
             <img width={"80%"} src={mapVietNam} alt="" />
           </div>
         </div>
-        <div className="flex gap-5 ml-10 mt-20 bg-white z-10">
-          <div>
+        <div className="flex gap-5 ml-10 my-20 bg-white z-10">
+          <div className="w-[60%]">
             <div className="text-orange-okhub w-[30%]">
               <h3>CHEERS</h3>
               <h1 className="text-[300%]">FAMILY</h1>
             </div>
-            <div>
+            {/* <div>
               <h3>H'MONG TEAM</h3>
               <p>
                 Blown away by our Tanzania safari, I never expected it to be
@@ -200,10 +214,11 @@ const HomePages = () => {
             <div className="flex gap-2">
               <Button name="JOIN WITH US" cancelButton={false} />
               <Button name="CALL US" cancelButton={true} />
-            </div>
+            </div> */}
           </div>
           <div>
-            <ul>
+            <CustomTabPanel data={data} />
+            {/* <ul>
               <li>TOUR LEADER</li>
               <li>SPECIALLIST</li>
               <li>LOCAL HOST</li>
@@ -213,10 +228,10 @@ const HomePages = () => {
               <img src="" alt="" />
               <img src="" alt="" />
               <img src="" alt="" />
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="h-[35rem] ml-10 flex gap-4 sm:flex-nowrap flex-wrap">
+        <div className="h-[37rem] ml-10 flex gap-4 sm:flex-nowrap flex-wrap">
           <div className="text-orange-okhub w-[80%]">
             <h3>FAQ ABOUT</h3>
             <h1 className="text-[300%]">THE TRIPS</h1>
@@ -225,23 +240,23 @@ const HomePages = () => {
           <div>
             <div>
               <div>
-                <h2>NATURE</h2>
-                <p>
+                <h2 className="text-[#B34B1E] text-3xl">NATURE</h2>
+                <p className="text-[#727272]">
                   Browse our full service agency services and prices or contact
                   us for custom quotes.
                 </p>
               </div>
               <div>
-                <p>What is included or excluded?</p>
-                <p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What is included or excluded?</p>
+                <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
                 </p>
               </div>
               <div>
-                <p>How do I book and corfirm my trip?</p>
-                <p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">How do I book and corfirm my trip?</p>
+                <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
@@ -249,15 +264,15 @@ const HomePages = () => {
               </div>
               <div>
                 <div>
-                  <p>What should I bring??</p>
-                  <p>
+                  <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What should I bring??</p>
+                  <p className="text-[#727272]">
                     Blown away by our Tanzania safari, I never expected it to be
                     that good — it totally exceeded mytations and was all hassle
                     free. Our guide was absolutely amazing too. Have re-booked.
                   </p>
                 </div>
-                <p>Travel insurance?</p>
-                <p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">Travel insurance?</p>
+                <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
@@ -268,23 +283,23 @@ const HomePages = () => {
           <div>
             <div>
               <div>
-                <h2>NATURE</h2>
-                <p>
+                <h2 className="text-black text-3xl">JOURNEY</h2>
+                <p className="text-[#727272]">
                   Browse our full service agency services and prices or contact
                   us for custom quotes.
                 </p>
               </div>
               <div>
-                <p>What is included or excluded?</p>
-                <p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What is included or excluded?</p>
+                <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
                 </p>
               </div>
               <div>
-                <p>How do I book and corfirm my trip?</p>
-                <p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">How do I book and corfirm my trip?</p>
+                <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
@@ -292,15 +307,15 @@ const HomePages = () => {
               </div>
               <div>
                 <div>
-                  <p>What should I bring??</p>
-                  <p>
+                  <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">What should I bring??</p>
+                  <p className="text-[#727272]">
                     Blown away by our Tanzania safari, I never expected it to be
                     that good — it totally exceeded mytations and was all hassle
                     free. Our guide was absolutely amazing too. Have re-booked.
                   </p>
                 </div>
-                <p>Travel insurance?</p>
-                <p>
+                <p className="text-[#B34B1E] text-xl border-b-2 border-black hover:border-[#B34B1E] my-2">Travel insurance?</p>
+                <p className="text-[#727272]">
                   Blown away by our Tanzania safari, I never expected it to be
                   that good — it totally exceeded mytations and was all hassle
                   free. Our guide was absolutely amazing too. Have re-booked.
