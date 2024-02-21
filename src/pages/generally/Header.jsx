@@ -63,13 +63,13 @@ const Header = () => {
       <div className="logo_responsive">
         <img width="100%" className="p-2" src={logo} alt="logo" />
       </div>
-      <div className="w-[75%] flex flex-col items-center gap-8 absolute bottom-10">
+      <div className="w-[75%] flex flex-col items-center gap-8 absolute md:bottom-10 bottom-10">
         <div className="w-[50%] text-[#FFFFFF]">
-          <h1 className="leading-[1rem] md:text-[300%] text-[200%] ">BACK TO</h1>{" "}
+          <h1 className="md:leading-[1rem] md:text-[300%] text-[200%] ">BACK TO</h1>{" "}
           <h1 id="nature_headtitle">nature</h1>
         </div>
         <div className="w-90% p-3 flex justify-between text-black bg-white rounded-xl disabled_responsive">
-          <div>
+          <div className="">
             <p className="text-[70%] text-[#727272] mb-2">TOUR</p>
             <div className="flex gap-3 font-bold">
               <img src={location} alt="Bản đồ" />
@@ -97,13 +97,14 @@ const Header = () => {
         </div>
         {/* responsive mobile */}
         <div className="w-[100%] p-3 text-black bg-white rounded-xl disabled_responsive--active">
-          <div>
+          <div className="w-full">
             <p className="text-[70%] text-[#727272] mb-2">TOUR</p>
             <div className="flex gap-3 font-bold">
               <img src={location} alt="Bản đồ" />
               <p>HAGIANG LOOP TOUR</p>
             </div>
           </div>
+          <div className="flex justify-between my-8">
           <div>
             <p className="text-[70%] text-[#727272] mb-2">SELF-DRIVING</p>
             <div className="flex gap-3 font-bold">
@@ -118,7 +119,8 @@ const Header = () => {
               <p>5 pax</p>
             </div>
           </div>
-          <button className="rounded-xl p-1 bg-[#B34B1E] text-white">
+          </div>
+          <button className="w-full rounded-xl p-1 bg-[#B34B1E] text-white">
             <p className="font-bold text-xl">$299</p>
             <p>BOOK NOW</p>
           </button>
